@@ -24,3 +24,98 @@ body {
     letter-spacing: -1px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.top-main{
+  @include outer-container;
+  background-color: red;
+
+  .bottom-image{
+    @include span-columns(12);
+
+    .left-bottom{
+      @include span-columns(4);
+      background-color: green;
+    }
+
+    .center-bottom{
+      @include span-columns(4);
+      background-color: blue;
+    }
+    .right-bottom{
+      @include span-columns(4);
+      background-color: yellow;
+    }
+  }
+}
