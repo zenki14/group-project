@@ -133,7 +133,7 @@ header {
       display: none;
     }
     .s3sliderImage span {
-      position: absolute; 
+      position: absolute;
       left: 0;
       font: 10px/15px Arial, Helvetica, sans-serif;
       padding: 10px 13px;
@@ -142,11 +142,11 @@ header {
       color: #fff;
       display: none;
       top: 0;
-
+    }
       .clear{
         clear: both;
       }
-  }
+
 
   .bottom-image{
     @include span-columns(12);
