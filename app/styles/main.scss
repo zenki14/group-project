@@ -11,9 +11,7 @@
 }
 //Main Styles
 
-ul {
-  list-style: none;
-}
+
 
 * {
   margin: 0;
@@ -23,22 +21,55 @@ ul {
   }
 }
 
+ul {
+  list-style: none;
+}
+
+html {
+  font-size: 10px;
+}
+
 body {
   @include center-content();
 
 }
 
 header {
-  height: 100px;
+  height: 75px;
   border-bottom: 1px solid #333;
-
+   
   .logo{
     float: left;
+    font-size: 7rem;
+    a {
+      color: lightgrey;
+      &:hover {
+        color: grey;
+      }
+    }
   }
   .nav-list{
     float: right;
+    display: inline-block;
+    font-size: 2.6rem;
+    padding-top: 28px;
+
+    a {
+      color: lightgrey;
+    }
+    
+    ul li {
+      display: inline;
+
+      
+      a:hover {
+        color: grey;
+      }
+
+    }
   }
 }
+
 
 
 
@@ -114,22 +145,42 @@ header {
 .top-main{
   @include outer-container;
   background-color: red;
+  max-width: inherit;
 
   .bottom-image{
-    @include span-columns(12);
+   
+
 
     .left-bottom{
       @include span-columns(4);
       background-color: green;
+      img {
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        
+      }
     }
 
     .center-bottom{
       @include span-columns(4);
       background-color: blue;
+      img { 
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        
+      }
     }
     .right-bottom{
       @include span-columns(4);
       background-color: yellow;
+      img {
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        
+      }
     }
   }
 }
