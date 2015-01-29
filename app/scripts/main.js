@@ -28,3 +28,12 @@ var request = function () {
 button.on('click', function () {
 	request();
 });
+
+
+
+
+$(document).ready(function() {
+	$('#s3slider').s3Slider({
+		timeOut: 4000
+	});
+});

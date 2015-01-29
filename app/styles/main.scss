@@ -114,6 +114,39 @@ header {
 .top-main{
   @include outer-container;
   background-color: red;
+  .top-image{
+    #s3slider {
+      width: 1110px;
+      height: 409px;
+      position: relative;
+      overflow: hidden;
+    }
+    #s3sliderContent{
+      width: 1110px;
+      position: absolute;
+      top: 0;
+      margin-left: 0;
+    }
+    .s3sliderImage{
+      float: left;
+      position: relative;
+      display: none;
+    }
+    .s3sliderImage span {
+      position: absolute; /* important */
+      left: 0;
+      font: 10px/15px Arial, Helvetica, sans-serif;
+      padding: 10px 13px;
+      width: 374px;
+      background-color: #000;
+      color: #fff;
+      display: none;
+      top: 0;
+
+      .clear{
+        clear: both;
+      }
+  }
 
   .bottom-image{
     @include span-columns(12);
@@ -314,16 +347,3 @@ header {
   @include span-columns(3);
   background-color:pink;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -14,7 +14,6 @@
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="../bower_components/normalize-css/normalize.css" />
-    <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -45,7 +44,19 @@
       <div class="wrapper">
         <div class="top-main">
           <div class="top-image">
-            <img src="http://www.fillmurray.com/1110/409" alt="">
+            <div id="s3slider">
+              <ul id="s3sliderContent">
+                <li class="s3sliderImage">
+                  <img src="http://www.fillmurray.com/1110/409">
+                  <span>Your text comes here</span>
+                </li>
+                <li class="s3sliderImage">
+                  <img src="http://www.fillmurray.com/1110/408">
+                  <span>Your text comes here</span>
+                </li>
+                <div class="clear s3sliderImage"></div>
+              </ul>
+            </div>
           </div>
           <div class="bottom-image">
             <div class="left-bottom">
@@ -101,6 +112,7 @@
     <!-- endbuild -->
 
         <!-- build:js scripts/main.js -->
+        <script src="s3Slider_Full/s3Slider.js" type="text/javascript"></script>
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
   </body>
