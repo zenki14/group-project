@@ -448,9 +448,51 @@ header {
 
 .left-body{
   @include span-columns(9);
-  background-color:orange;
+  //display:inline-block;
 }
 .right-body{
   @include span-columns(3);
   background-color:pink;
 }
+
+.tab-links li {
+        padding-left:1rem;
+        float:left;
+        //list-style:none;
+        width: 10rem;
+        border:0.1rem solid lightgrey;
+}
+.tab-links a {
+  text-decoration: none;
+            // padding:9px 15px;
+            // display:inline-block;
+            // border-radius:3px 3px 0px 0px;
+            // background:#7FB5DA;
+            font-size:1.6rem;
+            // font-weight:600;
+            // color:#4c4c4c;
+            // transition:all linear 0.15s;
+}
+.tab-body{
+  clear:both;
+  float:left;
+}
+.tab-content {
+        //padding:15px;
+        //border-radius:3px;
+        //box-shadow:-1px 1px 1px rgba(0,0,0,0.15);
+        //background:#fff;
+    }
+ 
+        .tab {
+            display:none;
+        }
+ 
+        .tab.active {
+            display:block;
+        }
+
+
+
+
+
