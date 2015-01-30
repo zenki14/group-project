@@ -78,11 +78,8 @@
           </div>
           <div class="right-body">
             <ul class="food-pics">
-              <li><img src="http://www.placecage.com/c/215/215"></li>
-              <li><img src="http://www.placecage.com/c/215/215"></li>
-              <li><img src="http://www.placecage.com/c/215/215"></li>
-              <li><img src="http://www.placecage.com/c/215/215"></li>
-              <li><img src="http://www.placecage.com/c/215/215"></li>
+              <li class="side_pictures"></li>
+              
             </ul>
           </div>
         </div>
@@ -93,6 +90,10 @@
         </span>
       </footer>
     </div>
+    <!--script for 5 right side picture-->
+    <script type="text/template" id="first_pic">
+        <img src="https://farm<%=farm%>.staticflickr.com/<%=server%>/<%=id%>_<%=secret%>.jpg" style="width:300px"/>
+    </script>
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
@@ -101,6 +102,7 @@
     <!-- endbuild -->
 
         <!-- build:js scripts/main.js -->
+        <script src="scripts/mark.js"></script>
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
   </body>
