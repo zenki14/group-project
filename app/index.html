@@ -35,9 +35,9 @@
           </div>
           <div class="nav-list">
             <ul>
-              <li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
-              <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-              <li><a href="#"><i class="fa fa-facebook-official"></i></a></li>
+              <li><a href="#"><span data-hover="Twitter"><i class="fa fa-twitter-square first"></i></span></a></li>
+              <li><a href="#"><span data-hover="Instagram"><i class="fa fa-instagram second"></i></span></a></li>
+              <li><a href="#"><span data-hover="Facebook"><i class="fa fa-facebook-official third"></i></span></a></li>
             </ul>
           </div>
         </nav>
@@ -95,6 +95,7 @@
         <img src="https://farm<%=farm%>.staticflickr.com/<%=server%>/<%=id%>_<%=secret%>.jpg" style="width:300px"/>
     </script>
     <!-- build:js scripts/vendor.js -->
+    <script src="../app/scripts/modernizr.custom.js"></script>
     <!-- bower:js -->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../bower_components/underscore/underscore.js"></script>
