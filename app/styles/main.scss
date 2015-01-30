@@ -42,7 +42,7 @@ header {
   .logo{
     float: left;
     font-size: 7rem;
-    
+
     a {
       color: lightgrey;
       &:hover {
@@ -137,7 +137,7 @@ header {
 
 .csstransforms3d .nav-list a:hover span::before,
 .csstransforms3d .nav-list a:focus span::before {
-  background: white;  
+  background: white;
 }
 
 
@@ -220,7 +220,7 @@ header {
     }
     ul.slides{
       display: block;
-      width: 5550px;
+      width: 6600px;
       height: 409px;
       margin: 0;
       padding: 0;
@@ -483,16 +483,11 @@ header {
         //box-shadow:-1px 1px 1px rgba(0,0,0,0.15);
         //background:#fff;
     }
- 
+
         .tab {
             display:none;
         }
- 
+
         .tab.active {
             display:block;
         }
-
-
-
-
-

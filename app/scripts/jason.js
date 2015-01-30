@@ -17,7 +17,7 @@ $(function(){
     interval = setInterval(function() {
       $slideContainer.animate({'margin-left': '-='+width}, animationSpeed, function() {
         if (++currentSlide === $slides.length) {
-          currentSlide = 1;
+          currentSlide = 0;
           $slideContainer.css('margin-left', 0);
         }
       });
@@ -32,6 +32,7 @@ $(function(){
   .on('mouseleave', startSlider);
 
   startSlider();
+
 
 
 });
