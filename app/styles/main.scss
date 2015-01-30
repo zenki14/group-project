@@ -144,8 +144,32 @@ header {
 
 .top-main{
   @include outer-container;
-  background-color: red;
+  background-color: green;
   max-width: inherit;
+
+  .top-image{
+    #slider{
+      width: 1110px;
+      height: 409px;
+      overflow: hidden;
+    }
+    ul.slides{
+      display: block;
+      width: 5550px;
+      height: 409px;
+      margin: 0;
+      padding: 0;
+      float: left;
+    }
+    li.slide{
+      float: left;
+      list-style-type: none;
+      width: 1110px;
+      height: 409px;
+    }
+
+  }
+
 
   .bottom-image{
 
