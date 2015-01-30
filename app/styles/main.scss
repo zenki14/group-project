@@ -445,10 +445,16 @@ header {
 
 
 
+.main-body {
+  @include center-content();
+  @include outer-container();
 
+}
 .left-body{
+  
   @include span-columns(9);
   background-color:orange;
+  font-size: 1.6rem;
 }
 .right-body{
   @include span-columns(3);
