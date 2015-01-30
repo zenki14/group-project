@@ -93,8 +93,10 @@
                   proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<p>
               </div>
               <div id="tab2" class="tab">
-                  <p>Tab #2 content goes here!</p>
-                  <p>Donec pulvinar neque sed semper lacinia. Curabitur lacinia ullamcorper nibh; quis imperdiet velit eleifend ac. Donec blandit mauris eget aliquet lacinia! Donec pulvinar massa interdum risus ornare mollis. In hac habitasse platea dictumst. Ut euismod tempus hendrerit. Morbi ut adipiscing nisi. Etiam rutrum sodales gravida! Aliquam tellus orci, iaculis vel.</p>
+                <div class="appetizers"></div><br/><br/>
+                <div class="entrees"></div><br/><br/>
+                <div class="sides"></div>
+                  
               </div>
               <div id="tab3" class="tab">
                   <p>Tab #3 content goes here!</p>
@@ -119,6 +121,16 @@
         </span>
       </footer>
     </div>
+    <!--menu tab script-->
+    <script type="text/template" id="menu_list">
+      <span class="itemName"><%=item%></span class="price">
+      <%=price%><br/>
+       <span><%=description%></span>
+       <span><%=allergies%></span>
+       <span><%=favorite%></span>
+       <span><%=spicy%></span>
+       <span><%=vegan%></span>
+    </script>
     <!--script for 5 right side picture-->
     <script type="text/template" id="first_pic">
         <img src="https://farm<%=farm%>.staticflickr.com/<%=server%>/<%=id%>_<%=secret%>.jpg" style="width:300px"/>
