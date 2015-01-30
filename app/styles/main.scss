@@ -39,18 +39,58 @@ header {
   border-bottom: 1px solid #333;
   text-decoration: none;
 
-  .logo{
+  .logo {
+    position: absolute;
     float: left;
     font-size: 7rem;
+    z-index: 1;
+    max-height: 70px;
     
+    &:hover .red, &:hover .green, &:hover .black {
+      opacity: 1;
+      transition: .5s ease-in-out;
+
+    }
+
     a {
       color: lightgrey;
-      &:hover {
-        color: grey;
       }
     }
 
   }
+  .red {
+    opacity: 0;
+    z-index: -1;
+    background-color: red;
+    width: 11px;
+    height: 11px;
+    position: relative;
+    left: 54px;
+    bottom: 47px;
+  }
+
+  .green {
+    opacity: 0;
+    z-index: -1;
+    background-color: green;
+    width: 11px;
+    height: 11px;
+    position: relative;
+    left: 45px;
+    bottom: 47px;
+  }
+
+  .black {
+    opacity: 0;
+    z-index: -1;
+    background-color: black;
+    width: 26px;
+    height: 26px;
+    position: relative;
+    left: 7px;
+    bottom: 71px;
+  }
+
   .nav-list{
     float: right;
     display: inline-block;
@@ -100,14 +140,12 @@ header {
         font-size: 2.8rem;
       }
 
-
       a:hover {
         color: grey;
       }
-
     }
-  }
-}
+  } 
+
 
 .csstransforms3d .nav-list a span::before {
   position: absolute;
@@ -218,6 +256,7 @@ header {
       height: 409px;
       overflow: hidden;
     }
+
     ul.slides{
       display: block;
       width: 5550px;
@@ -226,19 +265,17 @@ header {
       padding: 0;
       float: left;
     }
+
     li.slide{
       float: left;
       list-style-type: none;
       width: 1110px;
       height: 409px;
     }
-
   }
 
 
   .bottom-image{
-
-
 
     .left-bottom{
       @include span-columns(4);
@@ -247,7 +284,6 @@ header {
         display: block;
         margin-right: auto;
         margin-left: auto;
-
       }
     }
 
@@ -258,7 +294,6 @@ header {
         display: block;
         margin-right: auto;
         margin-left: auto;
-
       }
     }
     .right-bottom{
@@ -268,7 +303,6 @@ header {
         display: block;
         margin-right: auto;
         margin-left: auto;
-
       }
     }
   }
@@ -453,10 +487,44 @@ header {
 .left-body{
   
   @include span-columns(9);
+
   background-color:orange;
   font-size: 1.6rem;
+
+
 }
 .right-body{
   @include span-columns(3);
   background-color:pink;
 }
+
+.tab-links li {
+        padding-left: 1em;
+        float:left;
+        width: 10em;
+        border:0.1em solid lightgrey;
+}
+.tab-links a {
+  text-decoration: none;
+            font-size:1.6rem;
+}
+.tab-body{
+  clear:both;
+  float:left;
+}
+.tab-content {
+  
+    }
+ 
+        .tab {
+            display:none;
+        }
+ 
+        .tab.active {
+            display:block;
+        }
+
+
+
+
+

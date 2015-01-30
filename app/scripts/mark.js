@@ -17,3 +17,19 @@ $.getJSON('https://api.flickr.com/services/rest/?method=flickr.photos.search&api
      picture1 = picture.photos.photo[i];
       $('.side_pictures').append(renderPic(picture1) );}
 });
+
+
+
+$(document).ready(function() {
+    $('.left-body .tab-links a').on('click', function(e)  {
+        var currentAttrValue = $(this).attr('href');
+ 
+        // Show/Hide Tabs
+        $('.left-body ' + currentAttrValue).show().siblings().hide();
+ 
+        // Change/remove current tab to active
+        $(this).parent('li').addClass('active').siblings().removeClass('active');
+ 
+        e.preventDefault();
+    });
+});
