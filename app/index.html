@@ -96,9 +96,11 @@
                   proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<p>
               </div>
               <div id="tab2" class="tab">
-                <div class="appetizers"></div><br/><br/>
-                <div class="entrees"></div><br/><br/>
-                <div class="sides"></div>
+                <div class="appetizers">
+                  <span class="menuHeadings">Appetizers</span><br/><br/>
+                </div><br/><br/>
+                <div class="entrees"><span class="menuHeadings">Entrees</span><br/><br/></div><br/><br/>
+                <div class="sides"><span class="menuHeadings">Sides</span><br/><br/></div>
                   
               </div>
               <div id="tab3" class="tab">
@@ -126,13 +128,15 @@
     </div>
     <!--menu tab script-->
     <script type="text/template" id="menu_list">
-      <span class="itemName"><%=item%></span class="price">
-      <%=price%><br/>
-       <span><%=description%></span>
-       <span><%=allergies%></span>
-       <span><%=favorite%></span>
-       <span><%=spicy%></span>
-       <span><%=vegan%></span>
+      <div class="itemName"><%=item%></div>
+      <span class="price"><%=price%></span><br/>
+       <div><%=description%></div>
+       <div class="ratings">
+         <span><%=allergies%></span>
+         <span><%=favorite%></span>
+         <span><%=spicy%></span>
+         <span><%=vegan%></span>
+        </div>
     </script>
     <!--script for 5 right side picture-->
     <script type="text/template" id="first_pic">

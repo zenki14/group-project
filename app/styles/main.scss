@@ -488,11 +488,34 @@ header {
   
   @include span-columns(9);
   
-  background-color:orange;
+  //background-color:orange;
   font-size: 1.6rem;
 
+  img{
+    width:100%;
+  }
 
 }
+.menuHeadings{
+  float: left;
+  font-size: 2rem;
+  width: 100%;
+  border-bottom: 1px solid lightgrey;
+  padding: 10px 0px;
+}
+#menu_list{
+  line-height: 20px;
+}
+.itemName{
+  padding-top;15px;
+}
+.price{
+  float:right;
+}
+.allergies{
+  float: right;
+}
+
 .right-body{
   @include span-columns(3);
   background-color:pink;
@@ -500,6 +523,7 @@ header {
 }
 
 .tab-links li {
+        padding-bottom: 1em;
         padding-left: 1em;
         float:left;
         width: 10em;
