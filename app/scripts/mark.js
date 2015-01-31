@@ -28,7 +28,7 @@ var templatePic = $('#first_pic').html();
 console.log(templatePic);
 var renderPic = _.template(templatePic);
 
-$.getJSON('https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=c4485de49ffd3b45571e73a5b93a069f&tags=bar+food&format=json&nojsoncallback=1&auth_token=72157650547459811-2213d8b6447510cf&api_sig=281dbd1785181705f436d9adcbbd721a').done( function (picture) {
+$.getJSON('https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=41caa63570b5b4467ca9d8717b786d4a&tags=meatloaf&format=json&nojsoncallback=1&auth_token=72157650161557620-79711515f049ec58&api_sig=0b4c603caaf912e311de446d5eb06ee3').done( function (picture) {
      for(i = 0; i < 5; i++){
 
      picture1 = picture.photos.photo[i];
