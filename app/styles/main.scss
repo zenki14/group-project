@@ -43,13 +43,13 @@ header {
     position: absolute;
     float: left;
     font-size: 7rem;
+
     z-index: 1;
     max-height: 70px;
-    
+
     &:hover .red, &:hover .green, &:hover .black {
       opacity: 1;
       transition: .5s ease-in-out;
-
     }
 
     a {
@@ -144,7 +144,7 @@ header {
         color: grey;
       }
     }
-  } 
+  }
 
 
 .csstransforms3d .nav-list a span::before {
@@ -175,7 +175,7 @@ header {
 
 .csstransforms3d .nav-list a:hover span::before,
 .csstransforms3d .nav-list a:focus span::before {
-  background: white;  
+  background: white;
 }
 
 
@@ -247,7 +247,6 @@ header {
 
 .top-main{
   @include outer-container;
-  background-color: green;
   max-width: inherit;
 
   .top-image{
@@ -259,7 +258,7 @@ header {
 
     ul.slides{
       display: block;
-      width: 5550px;
+      width: 6600px;
       height: 409px;
       margin: 0;
       padding: 0;
@@ -279,7 +278,6 @@ header {
 
     .left-bottom{
       @include span-columns(4);
-      background-color: green;
       img {
         display: block;
         margin-right: auto;
@@ -289,7 +287,6 @@ header {
 
     .center-bottom{
       @include span-columns(4);
-      background-color: blue;
       img {
         display: block;
         margin-right: auto;
@@ -298,7 +295,6 @@ header {
     }
     .right-bottom{
       @include span-columns(4);
-      background-color: yellow;
       img {
         display: block;
         margin-right: auto;
@@ -480,15 +476,20 @@ header {
 
 
 .main-body {
-  @include span-columns(12);
-  //@include outer-container();
+  @include center-content();
+  @include outer-container();
 
 }
 .left-body{
-  
+
   @include span-columns(9);
+<<<<<<< HEAD
   
   //background-color:orange;
+=======
+
+  background-color:orange;
+>>>>>>> f3e1f0ec0cbdf3f3b99470a97378531126f87279
   font-size: 1.6rem;
 
   img{
@@ -554,8 +555,6 @@ header {
 }
 .right-body{
   @include span-columns(3);
-  background-color:pink;
-  float:right;
 }
 
 .tab-links li {
@@ -566,6 +565,7 @@ header {
         border:0.1em solid lightgrey;
 }
 .tab-links a {
+  color: #333;
   text-decoration: none;
             font-size:1.6rem;
 }
@@ -574,20 +574,17 @@ header {
   float:left;
 }
 .tab-content {
-  
+
     }
- 
+
         .tab {
             display:none;
         }
- 
+
         .tab.active {
             display:block;
         }
 
-
 .itemName{
   font-size: 1.6rem;
 }
-
-
