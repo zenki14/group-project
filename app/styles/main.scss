@@ -247,7 +247,6 @@ header {
 
 .top-main{
   @include outer-container;
-  background-color: green;
   max-width: inherit;
 
   .top-image{
@@ -279,7 +278,6 @@ header {
 
     .left-bottom{
       @include span-columns(4);
-      background-color: green;
       img {
         display: block;
         margin-right: auto;
@@ -289,7 +287,6 @@ header {
 
     .center-bottom{
       @include span-columns(4);
-      background-color: blue;
       img {
         display: block;
         margin-right: auto;
@@ -298,7 +295,6 @@ header {
     }
     .right-bottom{
       @include span-columns(4);
-      background-color: yellow;
       img {
         display: block;
         margin-right: auto;
@@ -480,23 +476,20 @@ header {
 
 
 .main-body {
-  @include span-columns(12);
-  //@include outer-container();
+  @include center-content();
+  @include outer-container();
 
 }
 .left-body{
   
   @include span-columns(9);
-  
-  background-color:orange;
+
   font-size: 1.6rem;
 
 
 }
 .right-body{
   @include span-columns(3);
-  background-color:pink;
-  float:right;
 }
 
 .tab-links li {
@@ -506,6 +499,7 @@ header {
         border:0.1em solid lightgrey;
 }
 .tab-links a {
+  color: #333;
   text-decoration: none;
             font-size:1.6rem;
 }
@@ -514,7 +508,6 @@ header {
   float:left;
 }
 .tab-content {
-  
     }
  
         .tab {
@@ -526,8 +519,6 @@ header {
         }
 
 
-.itemName{
-  font-size: 1.6rem;
-}
+
 
 
