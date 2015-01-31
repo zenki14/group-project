@@ -507,15 +507,51 @@ header {
   line-height: 20px;
 }
 .itemName{
-  padding-top;15px;
+  padding-top:15px;
+  float:left;
 }
 .price{
+  padding-top:15px;
   float:right;
 }
-.allergies{
+.description{
+  float: left;
+  width: 89%;
+  padding-top: 15px;
+  font-size: 1.1rem;
+  line-height: 16px;
+}
+.ratings{
+  padding-top:20px;
   float: right;
 }
-
+.allergies{
+  float:left;
+}
+.allergies:hover{
+  color:red;
+}
+.favorite{
+  padding-left:5px;
+  float:left;
+}
+.favorite:hover{
+  color:blue;
+}
+.spicy{
+  padding-left:5px;
+  float:left;
+}
+.spicy:hover{
+  color:green;
+}
+.vegan{
+  padding-left:5px;
+  float:left;
+}
+.vegan:hover{
+  color:orange;
+}
 .right-body{
   @include span-columns(3);
   background-color:pink;

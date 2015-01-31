@@ -1,16 +1,19 @@
 //menu tab template
 var picture1;
 var templateMenu = $('#menu_list').html();
-console.log(templateMenu);
 var renderMenu = _.template(templateMenu);
-console.log(renderMenu);
-console.dir(renderMenu);
+
 
 $.getJSON('http://private-anon-eafb492e3-restaurantapi.apiary-mock.com/menu').done( function (menu) {
        
        for(i = 0; i < menu.appetizers.length; i++){
         var menuA = menu.appetizers[i];
-        $('.appetizers').append(renderMenu(menuA) );}
+        $('.appetizers').append(renderMenu(menuA) );
+            if(menuA.appetizers === 1){
+                $('.allergies:hover').append("Bill");
+            }
+
+        }
 
         for(i = 0; i < menu.entrees.length; i++){
         var menuA = menu.entrees[i];
@@ -19,6 +22,8 @@ $.getJSON('http://private-anon-eafb492e3-restaurantapi.apiary-mock.com/menu').do
         for(i = 0; i < menu.sides.length; i++){
         var menuA = menu.sides[i];
         $('.sides').append(renderMenu(menuA) );}
+
+
 });
 
 
