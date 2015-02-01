@@ -249,6 +249,7 @@ header {
   @include outer-container;
   max-width: inherit;
 
+
   .top-image{
     #slider{
       width: 1110px;
@@ -515,6 +516,7 @@ header {
   float:right;
 }
 .description{
+  height: 65px;
   float: left;
   width: 89%;
   padding-top: 15px;
@@ -522,7 +524,8 @@ header {
   line-height: 16px;
 }
 .ratings{
-  padding-top:20px;
+  margin-top: 15px;
+  // padding-top:15px;
   float: right;
 }
 .allergies{
