@@ -2,19 +2,27 @@
 
 //menu tab template
 var picture1;
-var templateMenu = $('#menu_list').html();
+var templateMenu = $('#food_list').html();
 var renderMenu = _.template(templateMenu);
+var templateBeer = $('#beer_list').html();
+var renderBeer = _.template(templateBeer);
+var templateGames = $('#games_list').html();
+var renderGames = _.template(templateGames);
 var allergyInfo;
 var favoriteInfo;
 var spicyInfo;
 var veganInfo;
 var specialInfo;
 var latestInfo;
+var bottleInfo, draughtInfo, onlineInfo, multiplayer;
 
 //latest news
-$.getJSON('http://private-anon-eafb492e3-restaurantapi.apiary-mock.com/news/latest').done(function(news){
+$.getJSON('http://private-anon-eafb492e3-restaurantapi.apiary-mock.com/gamer/news').done(function(news){
     latestInfo = news.title;
-    console.log(latestInfo);
+    
+        var templateNews = $('#latest_news').html();
+        var renderNews = _.template(templateNews);
+        $('.left-bottom').append(renderNews(news) );
 });
 
 //special item
@@ -23,10 +31,10 @@ $.getJSON('http://private-anon-eafb492e3-restaurantapi.apiary-mock.com/menu/spec
     console.log(specialInfo);
 });
 
-$.getJSON('http://private-anon-eafb492e3-restaurantapi.apiary-mock.com/menu').done( function (menu) {
+$.getJSON('http://private-anon-eafb492e3-restaurantapi.apiary-mock.com/gamer/menu').done( function (menu) {
        
-       for(i = 0; i < menu.appetizers.length; i++){
-        var menuA = menu.appetizers[i];
+       for(i = 0; i < menu.Beer.length; i++){
+        var menuA = menu.Beer[i];
             if(menuA.allergies === 1){
                 allergyInfo = "Please consult server";
             }else{allergyInfo = "No allergy alert"}
@@ -35,14 +43,14 @@ $.getJSON('http://private-anon-eafb492e3-restaurantapi.apiary-mock.com/menu').do
                 favoriteInfo = "Yes!";
             }else{favoriteInfo = "Not yet."}
 
-            if(menuA.spicy === 1){
-                spicyInfo = "Yes!";
-            }else{spicyInfo = "No."}
+            if(menuA.bottle === 1){
+                bottleInfo = "Yes.";
+            }else{bottleInfo = "No."}
 
-            if(menuA.vegan === 1){
-                veganInfo = "Yes.";
-            }else{veganInfo = "No."}
-        $('.appetizers').append(renderMenu(menuA) );}
+            if(menuA.draught === 1){
+                draughtInfo = "Yes.";
+            }else{draughtInfo = "No."}
+        $('.beer').append(renderBeer(menuA) );}
 
         for(i = 0; i < menu.entrees.length; i++){
         var menuA = menu.entrees[i];
@@ -66,29 +74,25 @@ $.getJSON('http://private-anon-eafb492e3-restaurantapi.apiary-mock.com/menu').do
             //special of the day
             if(specialInfo === menuA.id){
                 var templateSpecial = $('#daily_special').html();
-                console.log(templateSpecial);
                 var renderSpecial = _.template(templateSpecial);
                 $('.center-bottom').append(renderSpecial(menuA) );
             }}
 
-        for(i = 0; i < menu.sides.length; i++){
-        var menuA = menu.sides[i];
-            if(menuA.allergies === 1){
-                allergyInfo = "Yes eat and die";
-            }else{allergyInfo = "No allergy alert"}
+        for(i = 0; i < menu.games.length; i++){
+        var menuA = menu.games[i];
 
             if(menuA.favorite === 1){
-                favoriteInfo = "Yes!";
-            }else{favoriteInfo = "Not yet."}
+                favoriteInfo = "Yes.";
+            }else{favoriteInfo = "No."}
 
-            if(menuA.spicy === 1){
-                spicyInfo = "Yes!";
-            }else{spicyInfo = "No."}
+            if(menuA.online === 1){
+                onlineInfo = "Yes!";
+            }else{onlineInfo = "No."}
 
-            if(menuA.vegan === 1){
-                veganInfo = "Yes.";
-            }else{veganInfo = "No."}
-        $('.sides').append(renderMenu(menuA) );}
+            if(menuA.multiplayer === 1){
+                multiplayerInfo = "Yes.";
+            }else{multiplayerInfo = "No."}
+        $('.sides').append(renderGames(menuA) );}
 
 });
 
@@ -97,7 +101,6 @@ $.getJSON('http://private-anon-eafb492e3-restaurantapi.apiary-mock.com/menu').do
 //5 pictures on right side template
 var picture1;
 var templatePic = $('#first_pic').html();
-console.log(templatePic);
 var renderPic = _.template(templatePic);
 
 $.getJSON('https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=82f2baa1b3e34727346da0edf2f4d73c&tags=ninja&format=json&nojsoncallback=1&auth_token=72157650579231652-934dc930cc79a031&api_sig=d79b778c67372eb53b30ac29aaa6333f').done( function (picture) {

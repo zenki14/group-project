@@ -49,27 +49,28 @@
         <div class="top-main">
           <div class="top-image">
               <div id='slider'>
-                <a href="javascript:moveRight();"><span class="nvgt" id="prev"><i class="fa fa-arrow-left"></i></span></a>
-                <a href="javascript:moveLeft();"><span class="nvgt" id="next"><i class="fa fa-arrow-right"></i></span></a>
-                  <ul class='slides'>
-                    <li class='slide slide1'><img src="http://www.fillmurray.com/1110/409" name="slideshow"/></li>
-                    <li class='slide slide2'><img src="http://placehold.it/1110x409"/></li>
-                    <li class='slide slide3'><img src="http://lorempixel.com/1110/409/"/></li>
-                    <li class='slide slide4'><img src="https://placeimg.com/1110/409"/></li>
-                    <li class='slide slide5'><img src="http://www.placecage.com/1110/409"/></li>
+                  <ul id='slides'>
+                    <li><img src="../images/barcade.jpg"></li>
+                    <li><img src="../images/barcade2.jpg"></li>
+                    <li><img src="../images/barcade4.jpg"></li>
+                    <li><img src="../images/barcade5.jpg"></li>
                   </ul>
+                  <span class="nvgt" id="prev"></span>
+                  <span class="nvgt" id="next"></span>
               </div>
           </div>
           <div class="bottom-image">
             <div class="left-bottom">
-              <img src="http://www.fillmurray.com/301/239" alt="">
+              <span class="latestNews">Latest News</span>
             </div>
             <div class="center-bottom">
               Today's Game Special
             </div>
             <div class="right-bottom">
               <!--<img src="http://www.fillmurray.com/301/239" alt="">-->
-              <iframe width="301" height="239" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=115%20Martin%20Luther%20King%20Junior%20Drive%20Southwest%2C%20Atlanta%2C%20GA%2C%20United%20States&key=AIzaSyBHLTfdzEaJiz3DXGpWBC1BXFZllskoL7g"></iframe>
+              <iframe width="260" height="190" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=115%20Martin%20Luther%20King%20Junior%20Drive%20Southwest%2C%20Atlanta%2C%20GA%2C%20United%20States&key=AIzaSyBHLTfdzEaJiz3DXGpWBC1BXFZllskoL7g"></iframe>
+              <span class="address">115 Martin Luther King Jr Dr  Atlanta, GA 30303</span>
+              <span class="phoneNum">770-555-5555</span>
             </div>
           </div>
         </div>
@@ -101,12 +102,14 @@
               </div>
               <div id="tab2" class="tab">
 
-                <div class="appetizers">
-                  <span class="menuHeadings">Appetizers</span><br/><br/>
+                <div class="beer">
+                  <span class="menuHeadings">Beers</span><br/><br/>
                 </div><br/><br/>
-                <div class="entrees"><span class="menuHeadings">Entrees</span><br/><br/></div><br/><br/>
-                <div class="sides"><span class="menuHeadings">Sides</span><br/><br/></div>
-                  
+
+                <div class="entrees"><span class="menuHeadings">Food</span><br/><br/></div><br/><br/>
+                <div class="sides"><span class="menuHeadings">Games</span><br/><br/></div>
+
+
 
               </div>
               <div id="tab3" class="tab">
@@ -145,10 +148,8 @@
     <!-- Latest News script-->
     <script type="text/template" id="latest_news">
       <div class ="latestNews">
-        <img src="../images/pacmantable.jpg">
-        <div class="itemName"><%=item%></div>
-        <span class="price"><%=price%></span>
-        <div class="description"><%=description%></div>
+        <div class="title"><%=title%></div>
+        <span class="post"><%=post%></span>
       </div>
     </script>
 
@@ -164,8 +165,8 @@
       </div>
     </script>
 
-    <!--menu tab script-->
-    <script type="text/template" id="menu_list">
+    <!--menu tab script food section-->
+    <script type="text/template" id="food_list">
       <div class="itemName"><%=item%></div>
       <span class="price"><%=price%></span>
        <div class="description"><%=description%></div>
@@ -177,6 +178,36 @@
          <div class="vegan" href="#" title="Vegan: <%=veganInfo%>"><i class="fa fa-leaf"></i></i></div>
         </div>
     </script>
+
+    <!--menu tab script beer section-->
+    <script type="text/template" id="beer_list">
+      <div class="itemName"><%=item%></div>
+      <span class="price"><%=price%></span>
+       <div class="description"><%=description%></div>
+       <div class="ratings">
+         <div class="allergies" href="#" title= "Allergy Info: <%=allergyInfo%>"><i class="fa fa-exclamation-triangle"></i></div>
+
+         <div class="favorite"href="#" title="Favorite: <%=favoriteInfo%>"><i class="fa fa-thumbs-up"></i></div>
+         <div class="bottle" href="#" title="Bottle: <%=bottleInfo%>"><i class="fa fa-bold"></i></div>
+         <div class="draught" href="#" title="Draught: <%=draughtInfo%>"><i class="fa fa-beer"></i></div>
+        </div>
+    </script>
+
+    <!--menu tab script games section-->
+    <script type="text/template" id="games_list">
+      <div class="itemName"><%=item%></div>
+      <span class="price"><%=price%></span>
+       <div class="description"><%=description%></div>
+       <div class="ratings">
+         <div class="favorite"href="#" title="Favorite: <%=favoriteInfo%>"><i class="fa fa-thumbs-up"></i></div>
+         <div class="online" href="#" title="Online: <%=onlineInfo%>"><i class="fa fa-wifi"></i></div>
+         <div class="multiplayer" href="#" title="Multiplayer: <%=multiplayerInfo%>"><i class="fa fa-users"></i></div>
+         <div class="rating" href="#" title="Rating: <%=rating%>"><i class="fa fa-child"></i></div>
+        <div class="platform" href="#" title="Platform: <%=platform%>"><i class="fa fa-database"></i></div>
+        </div>
+    </script>
+
+
     <!--script for 5 right side picture-->
     <script type="text/template" id="first_pic">
         <img src="https://farm<%=farm%>.staticflickr.com/<%=server%>/<%=id%>_<%=secret%>.jpg" style="width:300px"/>

@@ -251,7 +251,17 @@ header {
 
 
   .top-image{
+      width:1110px;
+      height:409px;
+      padding:20px;
+      border:1px solid gray;
+      -webkit-box-sizing:border-box;
+      -moz-box-sizing:border-box;
+      box-sizing:border-box;
+      background: black;
+    }
     #slider{
+<<<<<<< HEAD
       width: 1110px;
       // height: 409px;
       font-size: 2.6rem;
@@ -263,24 +273,45 @@ header {
           color: red;
         }
       }
+=======
+      overflow: hidden;
+      position:relative;
+      height:350px;
+      top:auto;
+>>>>>>> baf09d9b46bda84a4dd7e0cc3042dfbed413abb3
     }
-
-    ul.slides{
-      display: block;
-      width: 6600px;
-      height: 409px;
-      margin: 0;
-      padding: 0;
+    #slides{
+      position: relative;
+      height: auto;
+      list-style: none;
+      overflow: hidden;
+      float: left;
+      /*Chrom default padding for ul is 40px */
+      padding:0px;
+      margin:0px;
+    }
+    #slides li{
+      position: relative;
       float: left;
     }
-
-    li.slide{
-      float: left;
-      list-style-type: none;
-      width: 1110px;
-      height: 409px;
+    .nvgt{
+      position:absolute;
+      top: 120px;
+      height: 50px;
+      width: 30px;
+      opacity: 0.6;
     }
-  }
+    .nvgt:hover{
+      opacity: 0.9;
+    }
+    #prev{
+      background: #000 url('https://dl.dropboxusercontent.com/u/65639888/image/prev.png') no-repeat center;
+      left: 0px;
+    }
+    #next{
+      background: #000 url('https://dl.dropboxusercontent.com/u/65639888/image/next.png') no-repeat center;
+      right: 0px;
+    }
 
   #next {
     float: right;
@@ -292,16 +323,27 @@ header {
 
 
     .left-bottom{
+      height: 253px;
+      font-size: 2rem;
+      text-align: center;
+      background-color:HSLA(0, 0%, 92%, 1);
       @include span-columns(4);
-      img {
-        display: block;
-        margin-right: auto;
-        margin-left: auto;
-      }
+    }
+    .latestNews{
+      padding-top:5px;
     }
 
+    .post{
+        float:left;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        height: 200px;
+        font-size: 1.2rem;
+      }
+
     .center-bottom{
-      height: 239px;
+      background-color:HSLA(0, 0%, 92%, 1);
+      height: 253px;
       font-size: 2rem;
       text-align: center;
       @include span-columns(4);
@@ -318,9 +360,28 @@ header {
           font-size: 1.6rem;
         }
     }
-    
+
     .right-bottom{
       @include span-columns(4);
+      height: 253px;
+      background-color: gray;
+      iframe{
+        position: relative;
+        top: 20px;
+        left: 47px;
+      }
+      span.address{
+        position: relative;
+        white-space: nowrap;
+        top: 28px;
+        left: 57px;
+      }
+      span.phoneNum{
+        position: relative;
+        top: 45px;
+        right: 83px;
+      }
+
       img {
         display: block;
         margin-right: auto;
@@ -533,7 +594,11 @@ header {
 #menu_list{
   line-height: 20px;
 }
+.tab-links{
+  padding-top:10px;
+}
 .itemName{
+  clear:both;
   padding-top:15px;
   float:left;
 }
@@ -542,9 +607,10 @@ header {
   float:right;
 }
 .description{
+  clear:both;
   height: 65px;
   float: left;
-  width: 89%;
+  width: 80%;
   padding-top: 15px;
   font-size: 1.1rem;
   line-height: 16px;
@@ -563,7 +629,36 @@ header {
   float:left;
   color:blue;
 }
-
+.bottle{
+  padding-left:5px;
+  float:left;
+  color:brown;
+}
+.draught{
+  padding-left:5px;
+  float:left;
+  color:HSLA(40, 88%, 64%, 1);
+}
+.online{
+  padding-left:5px;
+  float:left;
+  color:purple;
+}
+.multiplayer{
+  padding-left:5px;
+  float:left;
+  color:green;
+}
+.rating{
+  padding-left:5px;
+  float:left;
+  color:orange;
+}
+.platform{
+  padding-left:5px;
+  float:left;
+  color:HSLA(348, 89%, 54%, 1);
+}
 .spicy{
   padding-left:5px;
   float:left;
@@ -620,7 +715,7 @@ header {
   background: #7fb5da;
   font-size: 1.6rem;
   font-weight: 600;
-  transition:all linear 0.15s; 
+  transition:all linear 0.15s;
   color: #333;
   text-decoration: none;
             font-size:1.6rem;
@@ -672,6 +767,7 @@ li.active a, li.active a:hover {
 .itemName{
   font-size: 1.6rem;
 }
+<<<<<<< HEAD
 
 #tab3 {
   ul{
@@ -698,3 +794,5 @@ li.active a, li.active a:hover {
 }
 
 
+=======
+>>>>>>> baf09d9b46bda84a4dd7e0cc3042dfbed413abb3
