@@ -17,12 +17,10 @@ var latestInfo;
 var bottleInfo, draughtInfo, onlineInfo, multiplayer;
 
 //latest news
-$.getJSON('http://private-anon-eafb492e3-restaurantapi.apiary-mock.com/news/latest').done(function(news){
+$.getJSON('http://private-anon-eafb492e3-restaurantapi.apiary-mock.com/gamer/news').done(function(news){
     latestInfo = news.title;
-    console.log(latestInfo);
     
         var templateNews = $('#latest_news').html();
-        console.log(templateNews);
         var renderNews = _.template(templateNews);
         $('.left-bottom').append(renderNews(news) );
 });
@@ -76,7 +74,6 @@ $.getJSON('http://private-anon-eafb492e3-restaurantapi.apiary-mock.com/gamer/men
             //special of the day
             if(specialInfo === menuA.id){
                 var templateSpecial = $('#daily_special').html();
-                console.log(templateSpecial);
                 var renderSpecial = _.template(templateSpecial);
                 $('.center-bottom').append(renderSpecial(menuA) );
             }}
@@ -104,7 +101,6 @@ $.getJSON('http://private-anon-eafb492e3-restaurantapi.apiary-mock.com/gamer/men
 //5 pictures on right side template
 var picture1;
 var templatePic = $('#first_pic').html();
-console.log(templatePic);
 var renderPic = _.template(templatePic);
 
 $.getJSON('https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=82f2baa1b3e34727346da0edf2f4d73c&tags=ninja&format=json&nojsoncallback=1&auth_token=72157650579231652-934dc930cc79a031&api_sig=d79b778c67372eb53b30ac29aaa6333f').done( function (picture) {

@@ -285,11 +285,9 @@ header {
       text-align: center;
       background-color:HSLA(0, 0%, 92%, 1);
       @include span-columns(4);
-      img {
-        display: block;
-        margin-right: auto;
-        margin-left: auto;
-      }
+    }
+    .latestNews{
+      padding-top:5px;
     }
 
     .post{
@@ -546,7 +544,7 @@ header {
   clear:both;
   height: 65px;
   float: left;
-  width: 89%;
+  width: 80%;
   padding-top: 15px;
   font-size: 1.1rem;
   line-height: 16px;
@@ -589,6 +587,11 @@ header {
   padding-left:5px;
   float:left;
   color:orange;
+}
+.platform{
+  padding-left:5px;
+  float:left;
+  color:HSLA(348, 89%, 54%, 1);
 }
 .spicy{
   padding-left:5px;
