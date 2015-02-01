@@ -1,3 +1,5 @@
+
+
 //menu tab template
 var picture1;
 var templateMenu = $('#menu_list').html();
@@ -6,13 +8,27 @@ var allergyInfo;
 var favoriteInfo;
 var spicyInfo;
 var veganInfo;
+var specialInfo;
+var latestInfo;
+
+//latest news
+$.getJSON('http://private-anon-eafb492e3-restaurantapi.apiary-mock.com/news/latest').done(function(news){
+    latestInfo = news.title;
+    console.log(latestInfo);
+});
+
+//special item
+$.getJSON('http://private-anon-eafb492e3-restaurantapi.apiary-mock.com/menu/special').done(function(item){
+    specialInfo = item.menu_item_id;
+    console.log(specialInfo);
+});
 
 $.getJSON('http://private-anon-eafb492e3-restaurantapi.apiary-mock.com/menu').done( function (menu) {
        
        for(i = 0; i < menu.appetizers.length; i++){
         var menuA = menu.appetizers[i];
             if(menuA.allergies === 1){
-                allergyInfo = "Yes eat and die";
+                allergyInfo = "Please consult server";
             }else{allergyInfo = "No allergy alert"}
 
             if(menuA.favorite === 1){
@@ -45,7 +61,15 @@ $.getJSON('http://private-anon-eafb492e3-restaurantapi.apiary-mock.com/menu').do
             if(menuA.vegan === 1){
                 veganInfo = "Yes.";
             }else{veganInfo = "No."}
-        $('.entrees').append(renderMenu(menuA) );}
+        $('.entrees').append(renderMenu(menuA) );
+
+            //special of the day
+            if(specialInfo === menuA.id){
+                var templateSpecial = $('#daily_special').html();
+                console.log(templateSpecial);
+                var renderSpecial = _.template(templateSpecial);
+                $('.center-bottom').append(renderSpecial(menuA) );
+            }}
 
         for(i = 0; i < menu.sides.length; i++){
         var menuA = menu.sides[i];
@@ -66,8 +90,8 @@ $.getJSON('http://private-anon-eafb492e3-restaurantapi.apiary-mock.com/menu').do
             }else{veganInfo = "No."}
         $('.sides').append(renderMenu(menuA) );}
 
-
 });
+
 
 
 //5 pictures on right side template
@@ -76,7 +100,7 @@ var templatePic = $('#first_pic').html();
 console.log(templatePic);
 var renderPic = _.template(templatePic);
 
-$.getJSON('https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=ae368a1ba992cc89c6bc57107d904113&tags=arcade+games&format=json&nojsoncallback=1&auth_token=72157650168838050-cdbd06cbd1db8415&api_sig=b7ae1ea3c14a0d1c2b56a50d1aa9165c').done( function (picture) {
+$.getJSON('https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=82f2baa1b3e34727346da0edf2f4d73c&tags=ninja&format=json&nojsoncallback=1&auth_token=72157650579231652-934dc930cc79a031&api_sig=d79b778c67372eb53b30ac29aaa6333f').done( function (picture) {
      for(i = 0; i < 5; i++){
 
      picture1 = picture.photos.photo[i];
