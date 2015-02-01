@@ -255,7 +255,18 @@ header {
       width: 1110px;
       height: 409px;
       overflow: hidden;
+      position: relative;
+      a{
+        position: absolute;
+        font-size: 40pt;
+        top: 175px;
+      }
+       span#next.nvgt{
+        position: relative;
+        left: 2327%;        
+      }
     }
+
 
     ul.slides{
       display: block;
@@ -264,6 +275,9 @@ header {
       margin: 0;
       padding: 0;
       float: left;
+    }
+    #next{
+
     }
 
     li.slide{
@@ -602,7 +616,7 @@ header {
   background: #7fb5da;
   font-size: 1.6rem;
   font-weight: 600;
-  transition:all linear 0.15s; 
+  transition:all linear 0.15s;
   color: #333;
   text-decoration: none;
             font-size:1.6rem;
@@ -654,5 +668,3 @@ li.active a, li.active a:hover {
 .itemName{
   font-size: 1.6rem;
 }
-
-

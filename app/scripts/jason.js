@@ -3,7 +3,7 @@ var $slideContainer;
 var $slides;
 
 var width = 1110;
-var animationSpeed = 7000;
+var animationSpeed = 1000;
 var pause = 5000;
 var currentSlide = 1;
 var interval;
@@ -15,14 +15,14 @@ function startSlider() {
   .on('mouseenter', pauseSlider)
   .on('mouseleave', startSlider);
 
-  interval = setInterval(function() {
+  /*interval = setInterval(function() {
     $slideContainer.animate({'margin-left': '-='+width}, animationSpeed, function() {
       if (++currentSlide === $slides.length-1) {
         currentSlide = 0;
         $slideContainer.css('margin-left', 0);
       }
     });
-  }, pause);
+  }, pause);*/
 }
 function pauseSlider() {
   clearInterval(interval);
