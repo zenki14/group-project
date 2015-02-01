@@ -9,13 +9,6 @@ var currentPostion = 0;
 var currentImage = 0;
 
 
-var width = 1110;
-var animationSpeed = 3000;
-var pause = 5000;
-var currentSlide = 1;
-var interval;
-var timerLeft;
-var timerRight;
 
 
 function init(){

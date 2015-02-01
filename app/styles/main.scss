@@ -261,25 +261,12 @@ header {
       background: black;
     }
     #slider{
-<<<<<<< HEAD
-      width: 1110px;
-      // height: 409px;
-      font-size: 2.6rem;
-      background: lightgrey;
-      overflow: hidden;
-      a {
-        color: white;
-        &:hover {
-          color: red;
-        }
-      }
-=======
       overflow: hidden;
       position:relative;
       height:350px;
       top:auto;
->>>>>>> baf09d9b46bda84a4dd7e0cc3042dfbed413abb3
     }
+    
     #slides{
       position: relative;
       height: auto;
@@ -313,9 +300,7 @@ header {
       right: 0px;
     }
 
-  #next {
-    float: right;
-  }
+ 
 
 
   .bottom-image{
@@ -767,7 +752,7 @@ li.active a, li.active a:hover {
 .itemName{
   font-size: 1.6rem;
 }
-<<<<<<< HEAD
+
 
 #tab3 {
   ul{
@@ -794,5 +779,4 @@ li.active a, li.active a:hover {
 }
 
 
-=======
->>>>>>> baf09d9b46bda84a4dd7e0cc3042dfbed413abb3
+
