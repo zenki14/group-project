@@ -251,42 +251,53 @@ header {
 
 
   .top-image{
-    #slider{
-      width: 1110px;
-      height: 409px;
-      overflow: hidden;
-      position: relative;
-      a{
-        position: absolute;
-        font-size: 40pt;
-        top: 175px;
-      }
-       span#next.nvgt{
-        position: relative;
-        left: 2327%;        
-      }
+      width:1110px;
+      height:409px;
+      padding:20px;
+      border:1px solid gray;
+      -webkit-box-sizing:border-box;
+      -moz-box-sizing:border-box;
+      box-sizing:border-box;
+      background: black;
     }
-
-
-    ul.slides{
-      display: block;
-      width: 6600px;
-      height: 409px;
-      margin: 0;
-      padding: 0;
+    #slider{
+      overflow: hidden;
+      position:relative;
+      height:350px;
+      top:auto;
+    }
+    #slides{
+      position: relative;
+      height: auto;
+      list-style: none;
+      overflow: hidden;
       float: left;
+      /*Chrom default padding for ul is 40px */
+      padding:0px;
+      margin:0px;
+    }
+    #slides li{
+      position: relative;
+      float: left;
+    }
+    .nvgt{
+      position:absolute;
+      top: 120px;
+      height: 50px;
+      width: 30px;
+      opacity: 0.6;
+    }
+    .nvgt:hover{
+      opacity: 0.9;
+    }
+    #prev{
+      background: #000 url('https://dl.dropboxusercontent.com/u/65639888/image/prev.png') no-repeat center;
+      left: 0px;
     }
     #next{
-
+      background: #000 url('https://dl.dropboxusercontent.com/u/65639888/image/next.png') no-repeat center;
+      right: 0px;
     }
-
-    li.slide{
-      float: left;
-      list-style-type: none;
-      width: 1110px;
-      height: 409px;
-    }
-  }
 
 
   .bottom-image{
@@ -320,7 +331,7 @@ header {
           font-size: 1.6rem;
         }
     }
-    
+
     .right-bottom{
       @include span-columns(4);
       img {
