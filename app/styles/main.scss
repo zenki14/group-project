@@ -280,6 +280,10 @@ header {
 
 
     .left-bottom{
+      height: 239px;
+      font-size: 2rem;
+      text-align: center;
+      background-color:HSLA(0, 0%, 92%, 1);
       @include span-columns(4);
       img {
         display: block;
@@ -288,7 +292,16 @@ header {
       }
     }
 
+    .post{
+        float:left;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        height: 200px;
+        font-size: 1.2rem;
+      }
+
     .center-bottom{
+      background-color:HSLA(0, 0%, 92%, 1);
       height: 239px;
       font-size: 2rem;
       text-align: center;
@@ -521,6 +534,7 @@ header {
   line-height: 20px;
 }
 .itemName{
+  clear:both;
   padding-top:15px;
   float:left;
 }
@@ -529,6 +543,7 @@ header {
   float:right;
 }
 .description{
+  clear:both;
   height: 65px;
   float: left;
   width: 89%;
@@ -550,7 +565,31 @@ header {
   float:left;
   color:blue;
 }
-
+.bottle{
+  padding-left:5px;
+  float:left;
+  color:brown;
+}
+.draught{
+  padding-left:5px;
+  float:left;
+  color:HSLA(40, 88%, 64%, 1);
+}
+.online{
+  padding-left:5px;
+  float:left;
+  color:purple;
+}
+.multiplayer{
+  padding-left:5px;
+  float:left;
+  color:green;
+}
+.rating{
+  padding-left:5px;
+  float:left;
+  color:orange;
+}
 .spicy{
   padding-left:5px;
   float:left;
