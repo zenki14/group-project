@@ -305,7 +305,7 @@ header {
 
 
     .left-bottom{
-      height: 239px;
+      height: 253px;
       font-size: 2rem;
       text-align: center;
       background-color:HSLA(0, 0%, 92%, 1);
@@ -325,7 +325,7 @@ header {
 
     .center-bottom{
       background-color:HSLA(0, 0%, 92%, 1);
-      height: 239px;
+      height: 253px;
       font-size: 2rem;
       text-align: center;
       @include span-columns(4);
@@ -574,6 +574,9 @@ header {
 }
 #menu_list{
   line-height: 20px;
+}
+.tab-links{
+  padding-top:10px;
 }
 .itemName{
   clear:both;
