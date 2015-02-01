@@ -38,6 +38,7 @@ header {
   height: 75px;
   border-bottom: 1px solid #333;
   text-decoration: none;
+  background-color: white;
 
   .logo {
     position: absolute;
@@ -659,6 +660,7 @@ header {
   @include span-columns(4);
   border: 0.1em solid lightgrey;
   border-radius: 3px;
+  background-color: grey;
 
   img {
     display: block;
@@ -712,7 +714,7 @@ header {
 }
 
 li.active a, li.active a:hover {
-          background: blue;
+          background: lightgoldenrodyellow;
           color: #4c4c4c;
         }
 
@@ -722,6 +724,7 @@ li.active a, li.active a:hover {
   box-shadow: -1px 1px 1px rgba(0,0,0,0.15);
   clear:both;
   float:left;
+  background-color: grey;
   border: 0.1em solid lightgrey;
 
   .tab {
@@ -776,6 +779,15 @@ li.active a, li.active a:hover {
     }
 
   }
+}
+
+footer {
+  display: block;
+  float: left;
+  height: 25px;
+  width: 100%;
+  padding-top: 5px;
+  border-top: 1px solid #333;
 }
 
 
