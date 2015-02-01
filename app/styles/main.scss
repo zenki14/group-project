@@ -506,6 +506,7 @@ header {
   @include center-content();
   @include outer-container();
   max-width: 100%;
+  margin-top: 2em;
 
   @include span-columns(12);
 
@@ -670,6 +671,30 @@ li.active a, li.active a:hover {
 
 .itemName{
   font-size: 1.6rem;
+}
+
+#tab3 {
+  ul{
+    margin-top: 1em;
+  }
+  input {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+  .submit-button {
+    padding: .6em;
+    background: #7fb5da;
+    border-radius: 3px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 3rem;
+    transition:all linear 0.15s; 
+    color: #333;
+    &:hover {
+      background: #a7cce5;
+    }
+
+  }
 }
 
 
