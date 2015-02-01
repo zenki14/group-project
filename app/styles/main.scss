@@ -253,8 +253,16 @@ header {
   .top-image{
     #slider{
       width: 1110px;
-      height: 409px;
+      // height: 409px;
+      font-size: 2.6rem;
+      background: lightgrey;
       overflow: hidden;
+      a {
+        color: white;
+        &:hover {
+          color: red;
+        }
+      }
     }
 
     ul.slides{
@@ -272,6 +280,10 @@ header {
       width: 1110px;
       height: 409px;
     }
+  }
+
+  #next {
+    float: right;
   }
 
 
