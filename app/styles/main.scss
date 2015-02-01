@@ -267,7 +267,7 @@ header {
       height:350px;
       top:auto;
     }
-    
+
     #slides{
       position: relative;
       height: auto;
@@ -301,7 +301,7 @@ header {
       right: 0px;
     }
 
- 
+
 
 
   .bottom-image{
@@ -309,41 +309,66 @@ header {
 
 
     .left-bottom{
+      overflow: scroll;
       height: 253px;
       font-size: 2rem;
       text-align: center;
-      background-color:HSLA(0, 0%, 92%, 1);
+      background-color:gray;
       @include span-columns(4);
-    }
-    .latestNews{
-      padding-top:5px;
-    }
+
+      h2{
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+      }
 
     .post{
+        overflow: scroll;
         float:left;
         overflow: hidden;
         text-overflow: ellipsis;
         height: 200px;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
+        border: 1px solid #333;
+        background-color: lightgoldenrodyellow;
+        padding: 1em;
+        margin: 1em;
       }
+    }
 
     .center-bottom{
-      background-color:HSLA(0, 0%, 92%, 1);
+      background-color: gray;
       height: 253px;
       font-size: 2rem;
       text-align: center;
       @include span-columns(4);
+        span.center{
+          font-weight: 600;
+      }
+      h2{
+        padding-top: 1rem;
+      }
         img {
           display: block;
           height: 144px;
           margin-right: auto;
           margin-left: auto;
         }
+        .itemName{
+          position: relative;
+          left: 2%;
+          font-weight: normal;
+        }
         .description{
-        text-align:left;
+        text-align: center;
+        position: relative;
+        left: 10%;
+        font-weight: normal;
         }
         .price{
+          position: relative;
           font-size: 1.6rem;
+          right: 2%;
+          font-weight: normal;
         }
     }
 
@@ -772,7 +797,7 @@ li.active a, li.active a:hover {
     font-size: 1.6rem;
     font-weight: 600;
     line-height: 3rem;
-    transition:all linear 0.15s; 
+    transition:all linear 0.15s;
     color: #333;
     &:hover {
       background: #a7cce5;
@@ -780,6 +805,7 @@ li.active a, li.active a:hover {
 
   }
 }
+
 
 footer {
   display: block;
@@ -789,6 +815,7 @@ footer {
   padding-top: 5px;
   border-top: 1px solid #333;
 }
+
 
 
 
