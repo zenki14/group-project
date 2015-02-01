@@ -251,28 +251,53 @@ header {
 
 
   .top-image{
+      width:1110px;
+      height:409px;
+      padding:20px;
+      border:1px solid gray;
+      -webkit-box-sizing:border-box;
+      -moz-box-sizing:border-box;
+      box-sizing:border-box;
+      background: black;
+    }
     #slider{
-      width: 1110px;
-      height: 409px;
       overflow: hidden;
+      position:relative;
+      height:350px;
+      top:auto;
     }
-
-    ul.slides{
-      display: block;
-      width: 6600px;
-      height: 409px;
-      margin: 0;
-      padding: 0;
+    #slides{
+      position: relative;
+      height: auto;
+      list-style: none;
+      overflow: hidden;
+      float: left;
+      /*Chrom default padding for ul is 40px */
+      padding:0px;
+      margin:0px;
+    }
+    #slides li{
+      position: relative;
       float: left;
     }
-
-    li.slide{
-      float: left;
-      list-style-type: none;
-      width: 1110px;
-      height: 409px;
+    .nvgt{
+      position:absolute;
+      top: 120px;
+      height: 50px;
+      width: 30px;
+      opacity: 0.6;
     }
-  }
+    .nvgt:hover{
+      opacity: 0.9;
+    }
+    #prev{
+      background: #000 url('https://dl.dropboxusercontent.com/u/65639888/image/prev.png') no-repeat center;
+      left: 0px;
+    }
+    #next{
+      background: #000 url('https://dl.dropboxusercontent.com/u/65639888/image/next.png') no-repeat center;
+      right: 0px;
+    }
 
 
   .bottom-image{
@@ -317,9 +342,28 @@ header {
           font-size: 1.6rem;
         }
     }
-    
+
     .right-bottom{
       @include span-columns(4);
+      height: 253px;
+      background-color: gray;
+      iframe{
+        position: relative;
+        top: 20px;
+        left: 47px;
+      }
+      span.address{
+        position: relative;
+        white-space: nowrap;
+        top: 28px;
+        left: 57px;
+      }
+      span.phoneNum{
+        position: relative;
+        top: 45px;
+        right: 83px;
+      }
+
       img {
         display: block;
         margin-right: auto;
@@ -649,7 +693,7 @@ header {
   background: #7fb5da;
   font-size: 1.6rem;
   font-weight: 600;
-  transition:all linear 0.15s; 
+  transition:all linear 0.15s;
   color: #333;
   text-decoration: none;
             font-size:1.6rem;
@@ -701,5 +745,3 @@ li.active a, li.active a:hover {
 .itemName{
   font-size: 1.6rem;
 }
-
-

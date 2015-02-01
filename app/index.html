@@ -49,15 +49,15 @@
         <div class="top-main">
           <div class="top-image">
               <div id='slider'>
-                <a href="javascript:moveRight();"><span class="nvgt" id="prev"><i class="fa fa-arrow-left"></i></span></a>
-                <a href="javascript:moveLeft();"><span class="nvgt" id="next"><i class="fa fa-arrow-right"></i></span></a>
-                  <ul class='slides'>
-                    <li class='slide slide1'><img src="http://www.fillmurray.com/1110/409" name="slideshow"/></li>
-                    <li class='slide slide2'><img src="http://placehold.it/1110x409"/></li>
-                    <li class='slide slide3'><img src="http://lorempixel.com/1110/409/"/></li>
-                    <li class='slide slide4'><img src="https://placeimg.com/1110/409"/></li>
-                    <li class='slide slide5'><img src="http://www.placecage.com/1110/409"/></li>
+                  <ul id='slides'>
+                    <li><img src="http://www.fillmurray.com/1110/409"></li>
+                    <li><img src="http://placehold.it/1110x409"></li>
+                    <li><img src="http://lorempixel.com/1110/409/"></li>
+                    <li><img src="https://placeimg.com/1110/409"></li>
+                    <li><img src="http://www.placecage.com/1110/409"></li>
                   </ul>
+                  <span class="nvgt" id="prev"></span>
+                  <span class="nvgt" id="next"></span>
               </div>
           </div>
           <div class="bottom-image">
@@ -69,7 +69,9 @@
             </div>
             <div class="right-bottom">
               <!--<img src="http://www.fillmurray.com/301/239" alt="">-->
-              <iframe width="301" height="239" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=115%20Martin%20Luther%20King%20Junior%20Drive%20Southwest%2C%20Atlanta%2C%20GA%2C%20United%20States&key=AIzaSyBHLTfdzEaJiz3DXGpWBC1BXFZllskoL7g"></iframe>
+              <iframe width="260" height="180" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=115%20Martin%20Luther%20King%20Junior%20Drive%20Southwest%2C%20Atlanta%2C%20GA%2C%20United%20States&key=AIzaSyBHLTfdzEaJiz3DXGpWBC1BXFZllskoL7g"></iframe>
+              <span class="address">115 Martin Luther King Jr Dr NW   Atlanta, Ga 30303</span>
+              <span class="phoneNum">770-555-5555</span>
             </div>
           </div>
         </div>
@@ -104,9 +106,11 @@
                 <div class="beer">
                   <span class="menuHeadings">Beers</span><br/><br/>
                 </div><br/><br/>
+
                 <div class="entrees"><span class="menuHeadings">Food</span><br/><br/></div><br/><br/>
                 <div class="sides"><span class="menuHeadings">Games</span><br/><br/></div>
                   
+
 
               </div>
               <div id="tab3" class="tab">
