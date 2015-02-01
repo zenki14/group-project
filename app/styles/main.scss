@@ -478,6 +478,7 @@ header {
 .main-body {
   @include center-content();
   @include outer-container();
+  max-width: 100%;
 
 }
 .left-body{
@@ -509,6 +510,11 @@ header {
 }
 .tab-content {
     }
+.tab-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
  
         .tab {
             display:none;

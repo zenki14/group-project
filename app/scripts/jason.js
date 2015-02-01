@@ -9,23 +9,40 @@ $(function(){
 
   var $slider = $('#slider');
   var $slideContainer = $slider.find('.slides');
-  var $slides = $slideContainer.find('.slide')
+  var $slides = $slideContainer.find('.slide');
 
   var interval;
 
   function startSlider() {
     interval = setInterval(function() {
-      $slideContainer.animate({'margin-left': '-='+width}, animationSpeed, function() {
+      var slideAnimation = $slideContainer.animate({'margin-left': '-='+width}, animationSpeed, function() {
         if (++currentSlide === $slides.length) {
-          currentSlide = 1;
-          $slideContainer.css('margin-left', 0);
+            currentSlide = 1;
+            $slideContainer.css('margin-left', 0);
         }
       });
     }, pause);
-  }
+  };
+
+// function startSlider() {
+//     if (currentSlide === $slides.length) {
+//         setInterval( function () {
+//           currentSlide = 1; 
+//           $slideContainer.css('margin-left', 0)
+//         }, pause);
+//       } else {
+//           $slideContainer.animate({'margin-left': '-='+width}, animationSpeed, function() {
+
+//         currentSlide++;
+//       }
+//     });
+// };
+
+
+
   function pauseSlider() {
     clearInterval(interval);
-  }
+  };
 
   $slideContainer
   .on('mouseenter', pauseSlider)
