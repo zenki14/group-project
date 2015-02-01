@@ -4,8 +4,8 @@ var $slideContainer;
 var $slides;
 
 var width = 1110;
-var animationSpeed = 1500;
-var pause = 3000;
+var animationSpeed = 7000;
+var pause = 5000;
 var currentSlide = 1;
 var interval;
 var timerLeft;
