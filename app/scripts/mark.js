@@ -28,7 +28,6 @@ $.getJSON('http://private-anon-eafb492e3-restaurantapi.apiary-mock.com/gamer/new
 //special item
 $.getJSON('http://private-anon-eafb492e3-restaurantapi.apiary-mock.com/menu/special').done(function(item){
     specialInfo = item.menu_item_id;
-    console.log(specialInfo);
 });
 
 $.getJSON('http://private-anon-eafb492e3-restaurantapi.apiary-mock.com/gamer/menu').done( function (menu) {
@@ -103,7 +102,7 @@ var picture1;
 var templatePic = $('#first_pic').html();
 var renderPic = _.template(templatePic);
 
-$.getJSON('https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=82f2baa1b3e34727346da0edf2f4d73c&tags=ninja&format=json&nojsoncallback=1&auth_token=72157650579231652-934dc930cc79a031&api_sig=d79b778c67372eb53b30ac29aaa6333f').done( function (picture) {
+$.getJSON('https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=b2402b20bab2aa634329d43c0736b550&tags=classic+video+games&format=json&nojsoncallback=1&auth_token=72157648279675773-0217ace586de6bbf&api_sig=1357fa29aa4db068defec7209b4082ee').done( function (picture) {
      for(i = 0; i < 5; i++){
 
      picture1 = picture.photos.photo[i];
