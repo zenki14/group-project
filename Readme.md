@@ -1,3 +1,5 @@
-## Yo, I'm a Readme
+This is a group oriented project in which we had to create hosted json files and experiment with the flikr and google APIs.
 
-You should probably update me so people looking at your code have an idea what it is being used for :)
+Our idea was a barcade with a custom menu and js animated elements.
+
+Contributors : Dane Worsham, Mark Lamson, JRFincham
